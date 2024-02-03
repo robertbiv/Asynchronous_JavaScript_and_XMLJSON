@@ -11,5 +11,6 @@
     <orderEntry type="library" name="jquery-3.7.1" level="application" />
     <orderEntry type="library" name="d3" level="application" />
     <orderEntry type="library" name="d3.v4" level="application" />
+    <orderEntry type="library" name="d3.layout.cloud" level="application" />
   </component>
 </module>
