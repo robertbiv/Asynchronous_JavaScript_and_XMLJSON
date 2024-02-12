@@ -2,13 +2,6 @@ let board = "---------"
 let turn = "X"
 async function callAPI() {
     const url = 'https://tic-tac-toe-api-psu.onrender.com/api/v1/'+board+'/O' //https:stujo-tic-tac-toe-stujo-v1.p.rapidapi.com/'+board+'/O';
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': '8a97ef1df6msh56c3a97e0be09dcp1c69b6jsn156016bab5f4',
-            'X-RapidAPI-Host': 'stujo-tic-tac-toe-stujo-v1.p.rapidapi.com'
-        }
-    };
     try {
         const response = await fetch(url);
         const result = await response.text();
