@@ -16,10 +16,14 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+function randomWord() {
+    let animals = ["cat","dog","fish","car","airplane","phone","computer","llama","fire","water"]
+    return animals[Math.floor(Math.random() * 10)]
+}
 
 var form = new FormData();
 var settings = {
-    "url": "https://api.imgur.com/3/gallery/search/viral/all/1?q=cats",
+    "url": "https://api.imgur.com/3/gallery/search/viral/all/1?q="+randomWord(),
     "method": "GET",
     "timeout": 0,
     "headers": {
@@ -64,7 +68,7 @@ $.getJSON(settings, (data) => {
                 <p>Comments: ${result.comment_count}</p>
               </div>
               <div class="card-action">
-                <p onclick="comments('${result.id}')">Comments</p>
+                <a onclick="comments('${result.id}')">Comments</a>
                 <a href=${result.link}>More Details</a>
               </div>
           </div>
